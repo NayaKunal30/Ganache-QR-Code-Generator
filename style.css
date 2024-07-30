@@ -1,0 +1,53 @@
+body {
+    background-color: #ffebcd; /* Soft cream background */
+    background-image: url('https://www.transparenttextures.com/patterns/white-linen.png'); /* Optional background texture */
+    margin: 0;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes continuousAnimation {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(10px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.zigzag {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    -webkit-background-clip: text; /* For WebKit-based browsers */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0 #e67e22, 4px 4px 0 #c0392b;
+    animation: continuousAnimation 2s infinite; /* Continuous animation */
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+.qr-container {
+    display: none; /* Initially hidden */
+    overflow: hidden; /* Hide overflow for sliding effect */
+}

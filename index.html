@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.gifer.com/origin/17/17f1308347fd23ab0cd657b21839b352.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen">
+    <div class="notification" id="notification">QR Code generated successfully!</div> <!-- Notification element -->
+
+    <div class="flex-grow flex flex-col items-center justify-center">
+        <h1 class="text-4xl md:text-6xl font-bold zigzag mb-10 flex items-center" style="font-family: 'Zilla Slab', serif;">
+            <img src="https://seeklogo.com/images/G/ganache-logo-1EB72084A8-seeklogo.com.png" alt="Ganache Icon" class="w-16 h-16 mr-4"> Ganache Private Key QR Code Generator
+        </h1>
+        
+        <div class="bg-gradient-to-r from-yellow-400 to-red-500 rounded-lg shadow-lg p-10 flex flex-col md:flex-row items-center w-11/12 md:w-5/6 lg:w-3/4 xl:w-2/3 transform transition duration-500 hover:scale-105 animate__animated animate__fadeIn" style="animation: slideIn 0.5s;">
+            <img src="https://i.gifer.com/origin/17/17f1308347fd23ab0cd657b21839b352.gif" alt="QR Code Icon" class="w-64 h-64 mb-4 md:mb-0 md:mr-8"> <!-- Increased image size -->
+            <div class="flex-1">
+                <input type="text" id="privateKey" placeholder="Enter your private key" class="border border-gray-300 rounded-lg p-4 w-full focus:outline-none focus:ring-2 focus:ring-yellow-500 mb-4 text-lg transition-transform duration-300 transform hover:scale-105" />
+                <p class="text-gray-600 text-sm mb-4">Example:<span class="font-bold">7AsBuwcZPJdJYk9PbVtwckCswQVoPaD5fCppuQ</span></p>
+                <button id="generateButton" class="bg-red-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-red-700 transition duration-200 text-lg w-full transform transition-transform duration-300 hover:scale-105">Generate QR Code</button> <!-- Full width button -->
+            </div>
+        </div>
+
+        <!-- QR Code Card initially hidden -->
+        <div id="qrcode" class="qr-container mt-8 p-4 rounded-lg shadow-lg bg-gradient-to-r from-yellow-400 to-red-500">
+            <!-- QR code will be appended here -->
+        </div>
+
+        <div id="downloadContainer" class="hidden mt-4">
+            <a id="downloadLink" href="#" class="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-200">Download QR Code</a>
+        </div>
+
+        <!-- Add gap between QR code card and footer -->
+        <div class="mb-8"></div> <!-- Added gap -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 w-full">
+        <p class="text-lg">© 2024 Ganache Private Key QR Code Generator | KSQUARE</p> 
+    </footer>
+
+    <!-- Include the QR Code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
