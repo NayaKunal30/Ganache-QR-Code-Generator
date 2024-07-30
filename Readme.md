@@ -26,7 +26,7 @@ Welcome to the **Ganache Private Key QR Code Generator**! This web application a
 - QR Code Generator Library
 
 ## Demo 🎥
-Check out the live demo of the application [here](https://your-live-demo-link.com) 👈
+Check out the live demo of the application [here]([https://your-live-demo-link.com)](https://nayakunal30.github.io/Ganache-QR-Code-Generator/) 👈
 
 ## Installation 💻
 To run this project locally, follow these steps:
